@@ -1,0 +1,34 @@
+
+
+        <h2> Grade List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Grade Name </th>
+            <th> Grade ID</th>
+            <th> Basic Amount </th>
+            <th> House Rent</th>
+            <th> Medical Alowance </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let grade of grades" >
+            <td> {{ grade.gradename }} </td>
+            <td> {{ grade.gradeid }} </td>
+            <td> {{ grade.basicAmount }} </td>
+            <td> {{ grade.houseRent }} </td>
+            <td> {{ grade.medicalAllowance }} </td>
+           
+        </tr>
+    </tbody>
+</table>
+
+<button (click) = "mgradeBasic()" class = "btn btn-danger" style="margin-left: 10px"> Add Basic</button>
+
+   <div class="form-group">
+            <label>Minimum Grade Basic</label>
+            <input type="number" class ="form-control" id = "grade"
+                [(ngModel)] = "mgb" name = "grade">
+        </div>
+
+

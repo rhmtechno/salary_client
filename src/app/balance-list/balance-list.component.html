@@ -1,0 +1,40 @@
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Account Number </th>
+            <th> Account Name</th>  
+            <th> Account Balance</th> 
+            <th> Action</th> 
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let cbal of companybal" >
+            <td> {{ cbal.accnumber }} </td>
+            <td> {{ cbal.acc_name }} </td>  
+            <td> {{ cbal.curr_bal }} </td> 
+            <td> <button (click)="toggleShow();show(cbal.accnumber)" class = "btn btn-success" >Add Balance</button> </td> 
+               
+        </tr>
+
+    </tbody>
+</table>
+
+
+
+
+<!-- <button (click) = "transferbalance()"  class = "btn btn-success"> Process</button> -->
+
+
+
+<div *ngIf="isShown" class="row container-fluid"  id="divshow" >
+
+    
+    <div >
+        <label>Amount</label>
+        <input type="number" class ="form-control" id = "totalSalary"
+            [(ngModel)] = "sumsalary" name = "totalSalary">
+    </div>
+
+    <button (click) = "transferbalance()"  class = "btn btn-success"> Process</button>
+</div>

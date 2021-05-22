@@ -1,0 +1,22 @@
+<h2 style="text-align: center;">Total salary is greater than account balance.Add required balance to pay salary</h2>
+<div >
+    <label> Company Bank Acount No</label>
+    <input type="number" disabled="disabled" class ="form-control" id = "totalSalary"
+        [(ngModel)] = "accnum" name = "totalSalary">
+</div>
+
+
+    <div >
+        <label> Available Company Balance</label>
+        <input type="number" disabled="disabled" class ="form-control" id = "totalSalary"
+            [(ngModel)] = "carbal" name = "totalSalary">
+    </div>
+
+    <div >
+        <label> New Amount</label>
+        <input type="number" class ="form-control" id = "totalSalary"
+            [(ngModel)] = "sumsalary" name = "totalSalary">
+    </div>
+
+
+    <button (click) = "transferbalance()"  class = "btn btn-success"> Process</button>

@@ -1,0 +1,62 @@
+<h2> Salary List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> ID </th>
+            <th> Name</th>
+            <th> Grade </th>
+            <th> Basic(A)</th>
+            <th> HR(20%)(B) </th>
+            <th> MA(15%)(C) </th>
+            <th> TS(A+B+C)</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let salary of salaryes" >
+            <td> {{ salary.emp_id }} </td>
+            <td> {{ salary.emp_name }} </td>
+            <td> {{ salary.gradename }} </td>
+            <td> {{ salary.basicAmount }} </td>
+            <td> {{ salary.houseRent }} </td>
+            <td> {{ salary.medicalAllowance }} </td>
+            <td> {{ salary.totalSalary }} </td>
+
+
+        </tr>
+    </tbody>
+</table>
+<!-- <div >
+    <label> TotalSalary</label>
+    <input type="number" class ="form-control" id = "totalSalary"
+        [(ngModel)] = "sumsalary" name = "totalSalary">
+</div>
+
+<div >
+    <button (click) = "companyDetails()" type="button" class="btn btn-secondary">Get Company Bank Details</button>
+</div>
+
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Account Number </th>
+            <th> Account Name</th>
+            <th> Account Balance</th>
+            <th> Payment</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let cbal of companybal" >
+            <td> {{ cbal.accnumber }} </td>
+            <td> {{ cbal.acc_name }} </td>
+            <td> {{ cbal.curr_bal }} </td>
+            <td> <button (click) = "transfervalidate(cbal.accnumber,cbal.curr_bal)" class = "btn btn-info"> Process</button></td>
+        </tr>
+
+    </tbody>
+</table>
+
+<button [disabled]="validate" class = "btn btn-info"> Process</button>
+
+<button [disabled]="validate" class = "btn btn-info"> Process</button> -->
+

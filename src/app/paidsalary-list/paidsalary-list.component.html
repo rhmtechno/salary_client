@@ -1,0 +1,26 @@
+<h2 style="text-align: center;"></h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Account Number </th>
+            <th> Account Name</th>
+            <th> Remaining Balance</th>
+            <th> Total Paid Salary</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let cbal of companybal" >
+            <td> {{ cbal.accnumber }} </td>
+            <td> {{ cbal.acc_name }} </td>
+            <td> {{ cbal.curr_bal }} </td>
+            <td> {{ paidsalary    }} </td>
+
+        </tr>
+
+    </tbody>
+</table>
+
+
+
+

@@ -1,0 +1,72 @@
+<div class="container">
+    <h3> Create Employee </h3>
+    <form (ngSubmit) = "onSubmit()">
+<div class="row">
+        <div class="form-group col-md-6">
+            <label><b>Employee Name</b></label>
+            <input type="text"  class ="form-control" id = "name"
+                [(ngModel)] = "empbank.name" name = "name">
+        </div>
+
+        <!-- <div class="form-group">
+            <label>Grade</label>
+            <input type="number" class ="form-control" id = "grade"
+                [(ngModel)] = "empbank.grade" name = "grade">
+        </div> -->
+
+        <div class="form-group col-md-6">
+            <span ><b>Select Grade</b></span>
+            <select [(ngModel)] = "empbank.grade" name = "grade" class="form-control"  (change)="selectGradeChange($event)" >
+              <option [value]="null">Please Select Grade</option>
+              <option *ngFor="let item of grade" [value]="item.gradeid">{{item.gradename}}</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label><b>Address</b></label>
+            <input type="text" class ="form-control" id = "address"
+                [(ngModel)] = "empbank.address" name = "address">
+        </div>
+        <div class="form-group col-md-6">
+            <label><b>Mobile Number</b></label>
+            <input type="text" class ="form-control" id = "mobile"
+                [(ngModel)] = "empbank.mobile" name = "mobile">
+        </div>
+
+        <!-- <div class="form-group">
+            <label>acctype</label>
+            <input type="text" class ="form-control" id = "acc_type"
+                [(ngModel)] = "empbank.acc_type" name = "acc_type">
+        </div> -->
+
+
+          <div class="form-group col-md-6">
+            <label><b>Bank Account Number</b></label>
+            <input type="text" class ="form-control" id = "accnumber"
+                [(ngModel)] = "empbank.accnumber" name = "accnumber">
+        </div>
+
+        <div class="form-group col-md-6">
+          <span ><b>Account Type</b></span>
+          <select [(ngModel)] = "empbank.acc_type" name = "acc_type" class="form-control"  (change)="selectGradeChange($event)" >
+
+            <option value="Savings">Savings</option>
+            <option value="Current">Current</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label><b>Bank Name</b></label>
+          <input type="text" class ="form-control" id = "bank_name"
+              [(ngModel)] = "empbank.bank_name" name = "bank_name">
+      </div>
+        <div class="form-group col-md-6">
+            <label><b>Branch Name</b></label>
+            <input type="text" class ="form-control" id = "bank_branch"
+                [(ngModel)] = "empbank.bank_branch" name = "bank_branch">
+        </div>
+
+       <div style="margin-top: 15px;" class="row"><button class = "btn btn-info" type ="submit">Submit</button></div>
+
+      </div>
+    </form>
+    </div>
