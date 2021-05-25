@@ -8,6 +8,7 @@ import { Sumsalary } from './sumsalary'
 import { Companybal } from './companybal'
 import { Variable } from './variable';
 import { Grade } from './grade';
+import { Empaccounts } from './empaccounts';
 
 
 
@@ -92,5 +93,9 @@ export class EmployeeService {
 
   getPaidSal(): Observable<number>{
     return this.httpClient.get<number>(`${this.baseURL}/paidsalary`);
+  }
+
+  getEmployBankList(): Observable<Empaccounts[]>{
+    return this.httpClient.get<Empaccounts[]>(`${this.baseURL}/employee/ejoinb`);
   }
 }

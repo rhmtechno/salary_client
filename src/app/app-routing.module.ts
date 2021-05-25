@@ -12,6 +12,8 @@ import { SalarysheetListComponent } from './salarysheet-list/salarysheet-list.co
 import { BalanceListComponent } from './balance-list/balance-list.component';
 import { WelcomeListComponent } from './welcome/welcome-list.component';
 import { PaidsalaryListComponent } from './paidsalary-list/paidsalary-list.component';
+import { EmpBankComponent } from './emp-bank/emp-bank.component';
+
 
 
 const routes: Routes = [
@@ -27,7 +29,9 @@ const routes: Routes = [
   {path: 'salarysheet', component: SalarysheetListComponent},
   {path: 'balance', component: BalanceListComponent},
   {path: 'welcome', component: WelcomeListComponent},
-  {path: 'paidsalary', component: PaidsalaryListComponent}
+  {path: 'paidsalary', component: PaidsalaryListComponent},
+  {path: 'empbank', component: EmpBankComponent}
+
 
 
 

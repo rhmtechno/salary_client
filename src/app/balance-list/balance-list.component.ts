@@ -35,7 +35,7 @@ private getCompanybal(){
     this.employeeService.getCompanybal().subscribe(data => {
       this.companybal = data;
     });
-   
+
   }
 
 show(acc:string){
@@ -47,9 +47,10 @@ show(acc:string){
 
 
   toggleShow() {
-  
+
+
   this.isShown = ! this.isShown;
-  
+
   }
   reloadCurrentRoute() {
     let currentUrl = this.router.url;
@@ -62,9 +63,12 @@ show(acc:string){
     this.employeeService.getTranBalToC(this.accnum,this.sumsalary).subscribe(data => {
         //this.companybal = data;
       });
- 
-      this.getCompanybal(); 
+
+      this.getCompanybal();
+      this.toggleShow();
       this. reloadCurrentRoute();
+      //this.router.navigate(['/balance']);
+
   }
- 
+
 }

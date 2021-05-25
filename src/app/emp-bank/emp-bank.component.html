@@ -1,0 +1,26 @@
+<h2> Employee Bank Account</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Employee ID </th>
+            <th> Account Name</th>
+            <th> Account Number </th>
+            <th> Account Type</th>
+            <th> Bank Name </th>
+            <th> Current Balance </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of empaccounts" >
+            <td> {{ employee.empId }} </td>
+            <td> {{ employee.name }} </td>
+            <td> {{ employee.accnumber }} </td>
+            <td> {{ employee.acc_type }} </td>
+            <td> {{ employee.bank_name }} </td>
+            <td> {{ employee.currball }} </td>
+
+
+        </tr>
+    </tbody>
+</table>

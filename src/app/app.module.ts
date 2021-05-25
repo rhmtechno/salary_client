@@ -16,6 +16,7 @@ import { GradeListComponent } from './grade-list/grade-list.component';
 import { BalanceListComponent } from './balance-list/balance-list.component';
 import { WelcomeListComponent } from './welcome/welcome-list.component';
 import { PaidsalaryListComponent } from './paidsalary-list/paidsalary-list.component';
+import { EmpBankComponent } from './emp-bank/emp-bank.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { PaidsalaryListComponent } from './paidsalary-list/paidsalary-list.compo
     GradeListComponent,
     BalanceListComponent,
     WelcomeListComponent,
-    PaidsalaryListComponent
+    PaidsalaryListComponent,
+    EmpBankComponent
   ],
   imports: [
     BrowserModule,
